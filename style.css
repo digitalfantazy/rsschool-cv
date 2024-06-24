@@ -1,0 +1,8 @@
+body {
+    max-width: 1200px;
+}
+
+h1 {
+    display: flex;
+    text-align: center;
+}
