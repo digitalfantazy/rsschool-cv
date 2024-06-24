@@ -25,3 +25,23 @@ Experienced web developer with expertise in creating dynamic and responsive webs
 * Git/GitHub.
 * Node.js, Express.
 * Python(basic knowledge) - Django Framework (basic knowledge), PostgreSQL.
+
+# Code examples
+
+```js
+function persistence(num) {
+    let k = 0;
+    let result = 0;
+    num = String(num);
+    while (num.length > 1) {
+        k++;
+        num = num.split('');
+        console.log(num);
+        num = num.reduce((a,b) => a * b);
+        console.log(num);
+        num = num.toString();
+    }
+  return k;
+
+}
+```
