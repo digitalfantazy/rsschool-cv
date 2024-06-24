@@ -14,3 +14,14 @@
 # About Me
 
 Experienced web developer with expertise in creating dynamic and responsive websites. Proficient in JavaScript, HTML, CSS, and various modern frameworks and libraries.
+
+# Skills
+
+* HTML
+* CSS, SCSS, BEM.
+* JavaScript (Fundamentals, OOP, Asynchronous JavaScript, ES6+, DOM, JSON).
+* TypeScript.
+* React JS, Redux, Redux-toolkit.
+* Git/GitHub.
+* Node.js, Express.
+* Python(basic knowledge) - Django Framework (basic knowledge), PostgreSQL.
