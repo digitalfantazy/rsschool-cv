@@ -45,3 +45,21 @@ function persistence(num) {
 
 }
 ```
+
+# Education
+
+* **Bachelor, Immanuel Kant Baltic Federal University, Kaliningrad**
+    * IT Security.
+
+
+# Experience
+
+* Fast-food delivery.
+
+* I have little experience in JS and Frontend development. Develop an application for a university
+
+# Languages
+
+- English - B2 
+- Russian - native speaker
+
