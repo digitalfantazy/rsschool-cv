@@ -133,6 +133,10 @@ nav {
     color: black
 }
 
+.contact-item a:hover {
+    color: rgba(127, 86, 217, 1);
+}
+
 .contact-item p {
     margin: 0;
 }
@@ -154,17 +158,18 @@ nav {
 }
 
 .left-side {
-    padding: 0 25px;
+    margin-right: 50px;
 }
 
-.experience-title {
-    /* color: rgba(127, 86, 217, 1); */
+.experience h2 {
+    letter-spacing: 4px;
     text-transform: uppercase;
     position: relative;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
+    margin: 0 0 10px;
 }
 
-.experience-title::after {
+.experience h2::after {
     content: "";
     position: absolute;
     left: 0;
@@ -173,21 +178,57 @@ nav {
     height: 1px; 
     background-color: rgba(127, 86, 217, 1);
 }
-  
 
+.experience-item h3 {
+    margin: 0 0 10px 0;
+    font-size: 30px;
+}
+
+.experience-item h4 {
+    margin: 0 0 10px 0;
+    color: rgba(127, 86, 217, 1);
+}
+
+.experience-item p {
+    margin: 0 0 10px 0;
+    font-size: 16px;
+    color:rgba(0, 0, 0, 0.655)
+}
+
+.experience-list {
+    margin: 0 0 25px 0;
+    padding: 0 0 0 25px;
+    list-style-type: none; 
+}
+
+.experience-list li {
+    position: relative;
+    padding-left: 20px;
+}
+
+.experience-list li::before {
+    content: "\2022"; 
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2em; 
+    color: rgba(127, 86, 217, 1); 
+    font-weight: bold; 
+}
 .right-side {
     margin-left: 20px;
 }
 
-.summary-title {
-    /* color: rgba(127, 86, 217, 1); */
+.right-side h2 {
+    letter-spacing: 4px;
     text-transform: uppercase;
     position: relative;
-    --paddings: 15px;
-    padding-bottom: 10px; 
+    padding-bottom: 5px; 
+    margin: 0 0 10px;
 }
 
-.summary-title::after {
+.right-side h2::after {
     content: "";
     position: absolute;
     left: 0;
@@ -199,6 +240,7 @@ nav {
 
 .skills h3 {
     margin-top: 20px;
+    color: rgba(127, 86, 217, 1);
 }
 
 .skills ul {

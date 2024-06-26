@@ -9,6 +9,10 @@
             href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
             rel="stylesheet"
         />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism-okaidia.min.css"
+        />
         <link rel="stylesheet" href="./css/style.css" />
         <title>Artyom Andriushchenko Junior Front-end developer</title>
     </head>
@@ -61,37 +65,115 @@
         <main>
             <div class="main-container">
                 <div class="left-side">
-                    <h2 class="experience-title">Experience</h2>
-                    <div class="experience-item">
-                        <h3>Frontend Developer</h3>
-                        <h4>Evident</h4>
-                        <p>Feb 2019 - Present, Lisbon</p>
-                        <ul>
-                            <li>Build a new web app with Vue.js in the Frontend, taking close attention to write well maintained code from the beginning</li>
-                            <li>Directly collaborated with Product Owner to work on the website redesign, actively giving suggestions for an improvement of UI and UX experience</li>
-                            <li>Launch of a website using the e-commerce platform, Intershop. All the FE was customized to attend to the client business. New features were developed to meet the user needs</li>
-                        </ul>
-                    </div>
-                    <div class="experience-item">
-                        <h3>Frontend Developer</h3>
-                        <h4>Accenture Portugal</h4>
-                        <p>Sep 2018 - Jan 2019, Lisbon</p>
-                        <ul>
-                            <li>Worked together with the CRO and marketing team in order to develop of A/B testing using mainly Google Optimize code editor, JavaScript and CSS3.</li>
-                        </ul>
-                    </div>
-                    <div class="experience-item">
-                        <h3>Responsive Web Design</h3>
-                        <h4>freeCodeCamp</h4>
-                        <p>2019, Lisbon</p>
-                    </div>
+                    <section class="experience">
+                        <h2>Experience</h2>
+                        <div class="experience-item">
+                            <h3>Frontend Developer</h3>
+                            <h4>Immanuel Kant Baltic Federal University</h4>
+                            <p>Feb 2024 - Present, Kaliningrad</p>
+                            <ul class="experience-list">
+                                <li>
+                                    Developed an educational platform focusing on interactive learning experiences,
+                                    integrating educational simulators.
+                                </li>
+                                <li>
+                                    Collaborated closely with the Product Owner to lead the redesign of the platform,
+                                    providing valuable insights to enhance UI and UX.
+                                </li>
+                                <li>
+                                    Implement a website using the university platform, tailoring frontend solutions to meet specific client requirements and user needs.
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="experience-item">
+                            <h3>Frontend Developer</h3>
+                            <h4>Aspirity</h4>
+                            <p>Sep 2022 - Feb 2023, Krasnoyarsk</p>
+                            <ul class="experience-list">
+                                <li>
+                                    Worked together with the CRO and marketing team in order to
+                                    develop of A/B testing using mainly Google Optimize code editor,
+                                    JavaScript and CSS3.
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="experience-item">
+                            <h3>Responsive Web Design</h3>
+                            <h4>StarTeam</h4>
+                            <p>Jan 2021 - Oct 2021, Moscow</p>
+                            <ul class="experience-list">
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section class="code-example">
+                        <h2>Code example</h2>
+                        <pre><code class="language-js">
+const useTimer = (initialTime) => {
+    const getInitialTime = () => {
+        const expirationTime = localStorage.getItem("expirationTime");
+        if (expirationTime) {
+            const currentTime = new Date().getTime();
+            const timeLeft = Math.ceil((expirationTime - currentTime) / 1000);
+            return timeLeft > 0 ? timeLeft : 0;
+        }
+        return initialTime;
+    };
+
+    const [timeLeft, setTimeLeft] = useState(getInitialTime);
+
+    useEffect(() => {
+        let timer;
+        if (timeLeft > 0) {
+            timer = setTimeout(() => {
+                setTimeLeft(timeLeft - 1);
+            }, 1000);
+
+            const currentTime = new Date().getTime();
+            const expirationTime = currentTime + timeLeft * 1000;
+            localStorage.setItem("expirationTime", expirationTime.toString());
+        }
+
+        return () => clearTimeout(timer);
+    }, [timeLeft]);
+
+    const resetTimer = () => {
+        setTimeLeft(initialTime);
+        const currentTime = new Date().getTime();
+        const expirationTime = currentTime + initialTime * 1000;
+        localStorage.setItem("expirationTime", expirationTime.toString());
+    };
+
+    return { timeLeft, resetTimer };
+};
+
+export default useTimer;
+                        </code></pre>
+                    </section>
+                    <section class="projects">
+                        <h2>My Projects</h2>
+                    </section>
+                    <section class="education">
+                        <h2>Education</h2>
+                        <h3>CyberSecurity engineer</h3>
+                        <h4>Bachelor, Immanuel Kant Baltic Federal University, Kaliningrad</h4>
+                        <p>2020-2024, Kaliningrad</p>
+                        <h3>CyberSecurity engineer</h3>
+                        <h4>Bachelor, Immanuel Kant Baltic Federal University, Kaliningrad</h4>
+                    </section>
                 </div>
                 <div class="right-side">
-                    <div class="summary">
+                    <section class="summary">
                         <h2 class="summary-title">Summary</h2>
-                        <p>Frontend developer with special care on the user experience. Passionate for learning new technologies and methodologies</p>
-                    </div>
-                    <div class="skills">
+                        <p>
+                            Frontend developer with special care on the user experience. Passionate
+                            for learning new technologies and methodologies
+                        </p>
+                    </section>
+                    <section class="skills">
                         <h2>Skills</h2>
                         <h3>Coding</h3>
                         <ul>
@@ -104,9 +186,17 @@
                             <li>Bootstrap 4</li>
                             <li>Vue.js</li>
                         </ul>
+                        <h3>Languages</h3>
+                        <ul>
+                            <li>Russia (Native)</li>
+                            <li>English (Upper-Intermediate)</li>
+                        </ul>
+                    </section>
                 </div>
             </div>
         </main>
-
+        <footer></footer>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/components/prism-javascript.min.js"></script>
     </body>
 </html>
