@@ -10,7 +10,9 @@ body {
     padding: 0;
 }
 
-a, a:link, a:visited  {
+a,
+a:link,
+a:visited {
     text-decoration: none;
 }
 
@@ -26,7 +28,7 @@ a, a:link, a:visited  {
     position: flex;
     justify-content: center;
     background-color: var(--background--color);
-    border-radius: 15px
+    border-radius: 15px;
 }
 
 nav {
@@ -77,7 +79,7 @@ nav {
 
 .profile-pic {
     border-radius: 50%;
-    margin: 0 25px 0 50px
+    margin: 0 25px 0 50px;
 }
 
 .header-content {
@@ -126,11 +128,10 @@ nav {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
-    
 }
 
 .contact-item a {
-    color: black
+    color: black;
 }
 
 .contact-item a:hover {
@@ -171,12 +172,12 @@ nav {
 }
 
 .experience h2::after {
-    content: "";
+    content: '';
     position: absolute;
     left: 0;
     bottom: -1px;
     width: 100%;
-    height: 1px; 
+    height: 1px;
     background-color: rgba(127, 86, 217, 1);
 }
 
@@ -193,7 +194,7 @@ nav {
 .experience-item p {
     margin: 0 0 10px 0;
     font-size: 16px;
-    color:rgba(0, 0, 0, 0.655)
+    color: rgba(0, 0, 0, 0.655);
 }
 
 .experience-list {
@@ -210,7 +211,7 @@ nav {
 }
 
 .experience-list li::before {
-    content: "\2022";
+    content: '\2022';
     position: absolute;
     left: 0;
     top: 50%;
@@ -229,12 +230,12 @@ nav {
 }
 
 .code-example h2::after {
-    content: "";
+    content: '';
     position: absolute;
     left: 0;
     bottom: -1px;
     width: 100%;
-    height: 1px; 
+    height: 1px;
     background-color: rgba(127, 86, 217, 1);
 }
 
@@ -247,13 +248,78 @@ nav {
 }
 
 .projects h2::after {
-    content: "";
+    content: '';
     position: absolute;
     left: 0;
     bottom: -1px;
     width: 100%;
-    height: 1px; 
+    height: 1px;
     background-color: rgba(127, 86, 217, 1);
+}
+
+.projects-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin: 25px 0 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.projects-list li {
+    display: inline-block;
+    overflow: hidden;
+    font-size: 16px;
+    margin: 0 10px 5px 0;
+    padding: 0;
+    position: relative;
+    transition: transform 0.5s;
+}
+
+.projects-list li:hover {
+    transform: scale(1.05);
+}
+
+.project-list-item h3 {
+    font-weight: 500;
+    margin: 15px 0 0 0;
+    padding: 0;
+    position: relative;
+    color: black;
+    transition: color 0.5s;
+}
+
+.project-list-item h3:hover {
+    color: rgba(127, 86, 217, 1);
+}
+
+.project-list-item h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    width: 0;
+    height: 1px;
+    background-color: #ccc;
+    transition: width 0.5s, background-color 0.5s;
+}
+
+.project-list-item:hover h3::after {
+    width: 100%;
+    background-color: rgba(127, 86, 217, 1);
+}
+
+.project-image {
+    width: 100%;
+    transition: transform 0.5s;
+    display: block;
+    height: max-content;
+    object-fit: contain;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.project-list-item:hover .project-image {
+    transform: scale(1.05);
 }
 
 .education h2 {
@@ -265,12 +331,12 @@ nav {
 }
 
 .education h2::after {
-    content: "";
+    content: '';
     position: absolute;
     left: 0;
     bottom: -1px;
     width: 100%;
-    height: 1px; 
+    height: 1px;
     background-color: rgba(127, 86, 217, 1);
 }
 
@@ -284,8 +350,6 @@ nav {
     color: rgba(127, 86, 217, 1);
 }
 
-
-
 .right-side {
     margin-left: 20px;
     padding-right: 25px;
@@ -295,29 +359,28 @@ nav {
     letter-spacing: 4px;
     text-transform: uppercase;
     position: relative;
-    padding-bottom: 5px; 
+    padding-bottom: 5px;
     margin: 0 0 10px;
 }
 
 .right-side h2::after {
-    content: "";
+    content: '';
     position: absolute;
     left: 0;
     bottom: -1px;
     width: 100%;
-    height: 1px; 
+    height: 1px;
     background-color: rgba(127, 86, 217, 1);
 }
 
 .summary p {
-    line-height: 25px
+    line-height: 25px;
 }
 
 .skills h3 {
     margin-top: 20px;
     color: rgba(127, 86, 217, 1);
 }
-
 
 .skills-list {
     margin: 0;
@@ -330,12 +393,12 @@ nav {
     display: inline-block;
     word-spacing: 10px;
     text-decoration: underline;
-    padding: 0
+    padding: 0;
 }
 
 .languages-list {
     margin: 0;
-    padding: 0; 
+    padding: 0;
 }
 
 .languages-list li {
@@ -343,6 +406,5 @@ nav {
     margin: 0 10px 5px 0;
     display: inline-block;
     text-decoration: underline;
-    padding: 0
+    padding: 0;
 }
-
