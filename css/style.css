@@ -133,6 +133,10 @@ nav {
     color: black
 }
 
+.contact-item a:hover {
+    color: rgba(127, 86, 217, 1);
+}
+
 .contact-item p {
     margin: 0;
 }
@@ -154,17 +158,19 @@ nav {
 }
 
 .left-side {
-    padding: 0 25px;
+    padding-left: 25px;
+    margin-right: 50px;
 }
 
-.experience-title {
-    /* color: rgba(127, 86, 217, 1); */
+.experience h2 {
+    letter-spacing: 4px;
     text-transform: uppercase;
     position: relative;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
+    margin: 0 0 10px;
 }
 
-.experience-title::after {
+.experience h2::after {
     content: "";
     position: absolute;
     left: 0;
@@ -173,21 +179,127 @@ nav {
     height: 1px; 
     background-color: rgba(127, 86, 217, 1);
 }
-  
+
+.experience-item h3 {
+    margin: 0 0 10px 0;
+    font-size: 30px;
+}
+
+.experience-item h4 {
+    margin: 0 0 10px 0;
+    color: rgba(127, 86, 217, 1);
+}
+
+.experience-item p {
+    margin: 0 0 10px 0;
+    font-size: 16px;
+    color:rgba(0, 0, 0, 0.655)
+}
+
+.experience-list {
+    margin: 0 0 25px 0;
+    padding: 0 0 0 25px;
+    list-style-type: none;
+}
+
+.experience-list li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    font-size: 1em; /* Ensure font size is standard */
+}
+
+.experience-list li::before {
+    content: "\2022";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2em; /* Adjust bullet size */
+    color: rgba(127, 86, 217, 1);
+    font-weight: bold;
+}
+
+.code-example h2 {
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 5px;
+    margin: 25px 0 20px;
+}
+
+.code-example h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 1px; 
+    background-color: rgba(127, 86, 217, 1);
+}
+
+.projects h2 {
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 5px;
+    margin: 50px 0 10px;
+}
+
+.projects h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 1px; 
+    background-color: rgba(127, 86, 217, 1);
+}
+
+.education h2 {
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    position: relative;
+    padding-bottom: 5px;
+    margin: 50px 0 10px;
+}
+
+.education h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 1px; 
+    background-color: rgba(127, 86, 217, 1);
+}
+
+.education-item h3 {
+    margin: 0 0 10px 0;
+    font-size: 30px;
+}
+
+.education-item h4 {
+    margin: 0 0 10px 0;
+    color: rgba(127, 86, 217, 1);
+}
+
+
 
 .right-side {
     margin-left: 20px;
+    padding-right: 25px;
 }
 
-.summary-title {
-    /* color: rgba(127, 86, 217, 1); */
+.right-side h2 {
+    letter-spacing: 4px;
     text-transform: uppercase;
     position: relative;
-    --paddings: 15px;
-    padding-bottom: 10px; 
+    padding-bottom: 5px; 
+    margin: 0 0 10px;
 }
 
-.summary-title::after {
+.right-side h2::after {
     content: "";
     position: absolute;
     left: 0;
@@ -195,17 +307,42 @@ nav {
     width: 100%;
     height: 1px; 
     background-color: rgba(127, 86, 217, 1);
+}
+
+.summary p {
+    line-height: 25px
 }
 
 .skills h3 {
     margin-top: 20px;
+    color: rgba(127, 86, 217, 1);
 }
 
-.skills ul {
-    list-style: none;
+
+.skills-list {
+    margin: 0;
     padding: 0;
 }
 
-.skills li {
-    margin-bottom: 5px;
+.skills-list li {
+    font-size: 16px;
+    margin: 0 10px 5px 0;
+    display: inline-block;
+    word-spacing: 10px;
+    text-decoration: underline;
+    padding: 0
 }
+
+.languages-list {
+    margin: 0;
+    padding: 0; 
+}
+
+.languages-list li {
+    font-size: 16px;
+    margin: 0 10px 5px 0;
+    display: inline-block;
+    text-decoration: underline;
+    padding: 0
+}
+
