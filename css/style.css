@@ -2,6 +2,10 @@
     --background--color: #494283;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Open Sans';
     background-color: #f4f4f4;
@@ -24,18 +28,13 @@ a:visited {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.nav {
-    position: flex;
-    justify-content: center;
-    background-color: var(--background--color);
-    border-radius: 15px;
-}
-
 nav {
-    display: flex;
     justify-content: center;
     width: 100%;
     padding: 20px 0;
+    display: flex;
+    background-color: var(--background--color);
+    border-radius: 15px;
 }
 
 .nav-list {
@@ -53,7 +52,7 @@ nav {
     color: white;
 }
 
-.nav a {
+.nav-item a {
     text-decoration: none;
     position: relative;
     outline: none;
@@ -61,7 +60,7 @@ nav {
     transition: opacity 0.3s ease-in-out;
 }
 
-.nav a::before {
+.nav-item a::before {
     content: '';
     position: absolute;
     left: 0;
@@ -73,13 +72,8 @@ nav {
     transition: transform 0.3s ease-in-out;
 }
 
-.nav a:hover::before {
+.nav-item a:hover::before {
     transform: scaleX(1);
-}
-
-.profile-pic {
-    border-radius: 50%;
-    margin: 0 25px 0 50px;
 }
 
 .header-content {
@@ -88,7 +82,14 @@ nav {
     margin: 50px 0 25px 0;
 }
 
-.header-content .header-text p {
+.profile-pic {
+    border-radius: 50%;
+    margin: 0 25px 0 50px;
+}
+
+.header-text p {
+    font-size: 24px;
+    margin: 0;
     color: rgba(127, 86, 217, 1);
 }
 
@@ -97,14 +98,8 @@ nav {
     margin: 5px;
 }
 
-.position {
-    font-size: 24px;
-    margin: 0;
-}
-
 .contacts {
     display: flex;
-    flex-wrap: wrap;
     margin-left: auto;
 }
 
@@ -118,10 +113,10 @@ nav {
     min-width: 200px;
 }
 
-.contacts-name {
+.contacts-info p:first-child {
     color: rgba(127, 86, 217, 1);
     font-size: 20px;
-    margin: 10px 0;
+    margin: 0 0 10px 0;
 }
 
 .contact-item {
@@ -157,7 +152,6 @@ nav {
     background-color: #fff;
     box-shadow: 0px 0 10px rgba(0, 0, 0, 0.1)
 }
-
 
 .left-side  {
     padding-left: 25px;
@@ -209,7 +203,7 @@ nav {
     position: relative;
     padding-left: 20px;
     margin-bottom: 10px;
-    font-size: 1em; /* Ensure font size is standard */
+    font-size: 16px; 
 }
 
 .experience-list li::before {
@@ -287,6 +281,10 @@ nav {
     background-color: rgba(127, 86, 217, 1);
 }
 
+.education-item:last-child {
+    margin-bottom: 100px;
+}
+
 .education-item h3 {
     margin: 0 0 10px 0;
     font-size: 30px;
@@ -313,7 +311,6 @@ nav {
     text-transform: uppercase;
     position: relative;
     padding-bottom: 5px;
-    /* margin: 0 0 10px; */
 }
 
 .right-side h2::after {
@@ -331,7 +328,7 @@ nav {
 }
 
 .skills h3 {
-    margin-top: 20px;
+    margin: 35px 0 15px 0;
     color: rgba(127, 86, 217, 1);
 }
 
@@ -362,6 +359,19 @@ nav {
     padding: 0;
 }
 
+.tools-list {
+    margin: 0;
+    padding: 0;
+}
+
+.tools-list li {
+    font-size: 16px;
+    margin: 0 10px 5px 0;
+    display: inline-block;
+    text-decoration: underline;
+    padding: 0;
+}
+
 .footer-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -385,10 +395,23 @@ nav {
     z-index: -1; 
 }
 
+.footer-github {
+    display: flex;
+}
+
+.footer-github p {
+    color: black;
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+.footer-github:hover p {
+    color: rgba(127, 86, 217, 1);
+}
+
 .footer-container p {
     justify-self: center;
 }
-
 
 .footer-rsscholl-icon {
     justify-self: end;

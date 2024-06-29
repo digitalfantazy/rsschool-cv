@@ -11,7 +11,7 @@
         />
         <link
             rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism-okaidia.min.css"
+            href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism-tomorrow.min.css"
         />
         <link rel="stylesheet" href="./css/style.css" />
         <title>Artyom Andriushchenko Junior Front-end developer</title>
@@ -19,24 +19,21 @@
     <body>
         <header>
             <div class="container">
-                <div class="nav">
-                    <nav>
-                        <ul class="nav-list">
-                            <li class="nav-item"><a href="#about-me">About me</a></li>
-                            <li class="nav-item"><a href="#skills">Skills</a></li>
-                            <li class="nav-item"><a href="#strengths">Strengths</a></li>
-                            <li class="nav-item"><a href="#code-example">Code</a></li>
-                            <li class="nav-item"><a href="#projects">Projects</a></li>
-                            <li class="nav-item"><a href="#contact">Contact</a></li>
-                            <li class="nav-item"><a href="#education">Education</a></li>
-                        </ul>
-                    </nav>
-                </div>
+                <nav>
+                    <ul class="nav-list">
+                        <li class="nav-item"><a href="#about-me">About me</a></li>
+                        <li class="nav-item"><a href="#experience">Experience</a></li>
+                        <li class="nav-item"><a href="#skills">Skills</a></li>
+                        <li class="nav-item"><a href="#code-example">Code</a></li>
+                        <li class="nav-item"><a href="#projects">Projects</a></li>
+                        <li class="nav-item"><a href="#education">Education</a></li>
+                    </ul>
+                </nav>
                 <div class="header-content">
                     <img src="./img/profile.jpg" alt="Profile Picture" class="profile-pic" />
                     <div class="header-text">
                         <h1>Artyom Andriushchenko</h1>
-                        <p class="position">Junior Frontend Developer</p>
+                        <p>Junior Frontend Developer</p>
                     </div>
                     <div class="contacts">
                         <ul class="contacts-info">
@@ -65,7 +62,7 @@
         <main>
             <div class="main-container">
                 <div class="left-side">
-                    <section class="experience">
+                    <section class="experience" id="experience">
                         <h2>Experience</h2>
                         <div class="experience-item">
                             <h3>Frontend Developer</h3>
@@ -136,7 +133,7 @@
                             </ul>
                         </div>
                     </section>
-                    <section class="code-example">
+                    <section class="code-example" id="code-example">
                         <h2>Code example</h2>
                         <pre><code class="language-js">
 const useTimer = (initialTime) => {
@@ -180,7 +177,7 @@ const useTimer = (initialTime) => {
 export default useTimer;
                         </code></pre>
                     </section>
-                    <section class="projects">
+                    <section class="projects" id="projects">
                         <h2>My Projects</h2>
                         <ul class="projects-list">
                             <li class="project-list-item">
@@ -231,7 +228,7 @@ export default useTimer;
                             </li>
                         </ul>
                     </section>
-                    <section class="education">
+                    <section class="education" id="education">
                         <h2>Education</h2>
                         <div class="education-item">
                             <h3>CyberSecurity engineer</h3>
@@ -251,7 +248,7 @@ export default useTimer;
                     </section>
                 </div>
                 <div class="right-side">
-                    <section class="summary">
+                    <section class="summary" id="about-me">
                         <h2 class="summary-title">Summary</h2>
                         <p>
                             Junior Frontend Developer with a keen eye for detail and a passion for
@@ -261,7 +258,7 @@ export default useTimer;
                             problem-solving.
                         </p>
                     </section>
-                    <section class="skills">
+                    <section class="skills" id="skills">
                         <h2>Skills</h2>
                         <h3>Coding</h3>
                         <ul class="skills-list">
@@ -276,6 +273,16 @@ export default useTimer;
                             <li>Tailwind</li>
                             <li>Node.js</li>
                         </ul>
+
+                        <h3>Tools & Technologies</h3>
+                        <ul class="tools-list">
+                            <li>Visual Studio Code</li>
+                            <li>Figma</li>
+                            <li>Git</li>
+                            <li>Selectel</li>
+                            <li>npm</li>
+                        </ul>
+
                         <h3>Languages</h3>
                         <ul class="languages-list">
                             <li>Russian (Native)</li>
@@ -287,12 +294,22 @@ export default useTimer;
         </main>
         <footer>
             <div class="footer-container">
-                <a href="https://github.com/digitalfantazy" target="_blank">
-                    <img src="./img/icons/icon_github.svg" alt="icon_github" width="50" height="50">
+                <a href="https://github.com/digitalfantazy" target="_blank" class="footer-github">
+                    <img
+                        src="./img/icons/icon_github.svg"
+                        alt="icon_github"
+                        width="50"
+                        height="50"
+                    />
+                    <p>My GitHub</p>
                 </a>
                 <p>2024</p>
-                <a class="footer-rsscholl-icon" href="https://rs.school/courses/javascript-preschool-ru" target="_blank">
-                    <img src="./img/icons/icon_school.svg" alt="icon_school" width="100">
+                <a
+                    class="footer-rsscholl-icon"
+                    href="https://rs.school/courses/javascript-preschool-ru"
+                    target="_blank"
+                >
+                    <img src="./img/icons/icon_school.svg" alt="icon_school" width="100" />
                 </a>
             </div>
         </footer>
