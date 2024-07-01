@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism-tomorrow.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Artyom Andriushchenko Junior Front-end developer</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#about-me">About me</a></li>
+                    <li class="nav-item"><a href="#experience">Experience</a></li>
+                    <li class="nav-item"><a href="#skills">Skills</a></li>
+                    <li class="nav-item"><a href="#code-example">Code</a></li>
+                    <li class="nav-item"><a href="#projects">Projects</a></li>
+                    <li class="nav-item"><a href="#education">Education</a></li>
+                </ul>
+            </nav>
+            <div class="header-content">
+                <img src="./img/profile.jpg" alt="profile-picture" class="profile-pic">
+                <div class="header-text">
+                    <h1>Artyom Andriushchenko</h1>
+                    <p>Junior Frontend Developer</p>
+                </div>
+                <div class="contacts">
+                    <ul class="contacts-info">
+                        <li>
+                            <p class="contacts-name">Contacts:</p>
+                        </li>
+                        <li class="contact-item">
+                            <img src="./img/icons/phone.png" alt="linkedin">
+                            <a href="tel:+79097763501">+79097763501</a>
+                        </li>
+                        <li class="contact-item">
+                            <img src="./img/icons/icon_email.svg" alt="email">
+                            <a href="mailto:artemaa2002@gmail.com">artemaa2002@gmail.com</a>
+                        </li>
+                        <li class="contact-item">
+                            <img src="./img/icons/telegram.svg" alt="phone">
+                            <a href="https://t.me/digita1fantazy">@digita1fantazy</a>
+                        </li>
+                        <li class="contact-item">
+                            <img src="./img/icons/location.png" alt="location">
+                            <p>Kaliningrad, Russia</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="main-container">
+            <div class="left-side">
+                <section class="experience" id="experience">
+                    <h2>Experience</h2>
+                    <div class="experience-item">
+                        <h3>Frontend Developer</h3>
+                        <h4>Immanuel Kant Baltic Federal University</h4>
+                        <p>Feb 2024 - Present, Kaliningrad</p>
+                        <ul class="experience-list">
+                            <li>
+                                Developed an educational platform focusing on interactive
+                                learning experiences, integrating educational simulators.
+                            </li>
+                            <li>
+                                Collaborated closely with the Product Owner to lead the redesign
+                                of the platform, providing valuable insights to enhance UI and
+                                UX.
+                            </li>
+                            <li>
+                                Implement a website using the university platform, tailoring
+                                frontend solutions to meet specific client requirements and user
+                                needs.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="experience-item">
+                        <h3>Frontend Developer</h3>
+                        <h4>Aspirity</h4>
+                        <p>Sep 2022 - Feb 2023, Krasnoyarsk</p>
+                        <ul class="experience-list">
+                            <li>
+                                Created and maintained responsive web pages to ensure
+                                cross-browser compatibility and mobile responsiveness.
+                            </li>
+                            <li>
+                                Implemented user interface designs using HTML, CSS, and
+                                JavaScript, improving overall user experience.
+                            </li>
+                            <li>
+                                Collaborated with backend developers to integrate RESTful APIs,
+                                enhancing data interaction on the frontend.
+                            </li>
+                            <li>
+                                Debugged and fixed front-end issues, ensuring smooth
+                                functionality and performance optimization.
+                            </li>
+                            <li>
+                                Participated in code reviews and team meetings, providing
+                                feedback and suggestions for continuous improvement.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="experience-item">
+                        <h3>Responsive Web Design</h3>
+                        <h4>StarTeam</h4>
+                        <p>Jan 2022 - Oct 2022, Moscow</p>
+                        <ul class="experience-list">
+                            <li>
+                                Developed and maintained responsive websites and landing pages,
+                                ensuring cross-browser compatibility and adherence to modern
+                                design standards.
+                            </li>
+                            <li>
+                                Wrote JavaScript code to enhance user interfaces and provide
+                                interactive elements on the web pages.
+                            </li>
+                            <li>
+                                Worked with build tools such as Gulp and Webpack to streamline
+                                the development process.
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="code-example" id="code-example">
+                    <h2>Code example</h2>
+                    <pre><code class="language-js">
+const useTimer = (initialTime) => {
+    const getInitialTime = () => {
+        const expirationTime = localStorage.getItem("expirationTime");
+        if (expirationTime) {
+            const currentTime = new Date().getTime();
+            const timeLeft = Math.ceil((expirationTime - currentTime) / 1000);
+            return timeLeft > 0 ? timeLeft : 0;
+        }
+        return initialTime;
+    };
+
+    const [timeLeft, setTimeLeft] = useState(getInitialTime);
+
+    useEffect(() => {
+        let timer;
+        if (timeLeft > 0) {
+            timer = setTimeout(() => {
+                setTimeLeft(timeLeft - 1);
+            }, 1000);
+
+            const currentTime = new Date().getTime();
+            const expirationTime = currentTime + timeLeft * 1000;
+            localStorage.setItem("expirationTime", expirationTime.toString());
+        }
+
+        return () => clearTimeout(timer);
+    }, [timeLeft]);
+
+    const resetTimer = () => {
+        setTimeLeft(initialTime);
+        const currentTime = new Date().getTime();
+        const expirationTime = currentTime + initialTime * 1000;
+        localStorage.setItem("expirationTime", expirationTime.toString());
+    };
+
+    return { timeLeft, resetTimer };
+};
+
+export default useTimer;
+                        </code></pre>
+                </section>
+                <section class="projects" id="projects">
+                    <h2>My Projects</h2>
+                    <ul class="projects-list">
+                        <li class="project-list-item">
+                            <a href="https://digitalfantazy.github.io/Food/" target="_blank">
+                                <img src="./img/projects/food_project.png" alt="food_project" class="project-image">
+                                <h3>Food Delivery</h3>
+                            </a>
+                        </li>
+                        <li class="project-list-item">
+                            <a href="https://github.com/digitalfantazy/diplom1/tree/dev" target="_blank">
+                                <img src="./img/projects/platform_front_project.png" alt="platform"
+                                    class="project-image">
+                                <h3>Education Platform</h3>
+                            </a>
+                        </li>
+                        <li class="project-list-item">
+                            <a href="https://digitalfantazy.github.io/Movies/" target="_blank">
+                                <img src="./img/projects/movie_project.png" alt="movie_project" class="project-image">
+                                <h3>Movies</h3>
+                            </a>
+                        </li>
+                        <li class="project-list-item">
+                            <a href="https://github.com/digitalfantazy/ArabicAndRomanCalc" target="_blank">
+                                <img src="./img/projects/calc_projects.png" alt="calc" class="project-image">
+                                <h3>Arabic-Roman Calculator</h3>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+                <section class="education" id="education">
+                    <h2>Education</h2>
+                    <div class="education-item">
+                        <h3>CyberSecurity engineer</h3>
+                        <h4>Bachelor, Immanuel Kant Baltic Federal University</h4>
+                        <p>2020-2024, Kaliningrad</p>
+                    </div>
+                    <div class="education-item">
+                        <h3>HTML, CSS, JavaScript</h3>
+                        <h4>Udemy</h4>
+                        <p>2021, Online</p>
+                    </div>
+                    <div class="education-item">
+                        <h3>TypeScript, Next.js</h3>
+                        <h4>PurpleSchool</h4>
+                        <p>2023, Online</p>
+                    </div>
+                </section>
+            </div>
+            <div class="right-side">
+                <section class="summary" id="about-me">
+                    <h2 class="summary-title">Summary</h2>
+                    <p>
+                        Junior Frontend Developer with a keen eye for detail and a passion for
+                        crafting seamless user experiences. Quick learner with a strong drive to
+                        continuously enhance my skills and adapt to new technologies. Excellent
+                        team player with a collaborative spirit and a proactive approach to
+                        problem-solving.
+                    </p>
+                </section>
+                <section class="skills" id="skills">
+                    <h2>Skills</h2>
+                    <h3>Coding</h3>
+                    <ul class="skills-list">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>SASS/SCSS</li>
+                        <li>JavaScript</li>
+                        <li>TypeScript</li>
+                        <li>React.js</li>
+                        <li>Redux</li>
+                        <li>Next.js</li>
+                        <li>Tailwind</li>
+                        <li>Node.js</li>
+                    </ul>
+
+                    <h3>Tools & Technologies</h3>
+                    <ul class="tools-list">
+                        <li>Visual Studio Code</li>
+                        <li>Figma</li>
+                        <li>Git</li>
+                        <li>Selectel</li>
+                        <li>npm</li>
+                    </ul>
+
+                    <h3>Languages</h3>
+                    <ul class="languages-list">
+                        <li>Russian (Native)</li>
+                        <li>English (Upper-Intermediate)</li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <a href="https://github.com/digitalfantazy" target="_blank" class="footer-github">
+                <img src="./img/icons/icon_github.svg" alt="icon_github" width="50" height="50">
+                <p>My GitHub</p>
+            </a>
+            <p>2024</p>
+            <a class="footer-rsscholl-icon" href="https://rs.school/courses/javascript-preschool-ru" target="_blank">
+                <img src="./img/icons/icon_school.svg" alt="icon_school" width="100">
+            </a>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/components/prism-javascript.min.js"></script>
+</body>
+
+</html>
