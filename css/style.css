@@ -153,9 +153,9 @@ nav {
     box-shadow: 0px 0 10px rgba(0, 0, 0, 0.1)
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .container {
-        width: 90%;
+        width: 100%;
         padding: 15px;
     }
 
@@ -192,9 +192,9 @@ nav {
     .projects-list {
         grid-template-columns: 1fr;
     }
-}
+} */
 
-@media (max-width: 480px) {
+/* @media (max-width: 480px) {
     .nav-list {
         flex-direction: column;
     }
@@ -250,7 +250,7 @@ nav {
         justify-content: center;
         margin: 10px 0;
     }
-}
+} */
 
 .left-side  {
     padding-left: 25px;
